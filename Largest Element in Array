@@ -1,0 +1,19 @@
+class Solution {
+    public static int largest(int[] arr) {
+        // code here
+        if (arr == null) {
+            throw new IllegalArgumentException("Array is null");
+        }
+        int n = arr.length;
+        if (n == 0) {
+            throw new IllegalArgumentException("Array is empty");
+        }
+        int max = arr[0];
+        for(int i=1; i<n; i++){
+            if(arr[i]>max){
+                max=arr[i];
+            }
+        }
+        return max;
+    }
+}
